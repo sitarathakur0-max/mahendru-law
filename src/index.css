@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-navy-950: #070D18;
+  --color-navy-900: #0B1528;
+  --color-navy-850: #0F1C36;
+  --color-navy-800: #162646;
+  --color-navy-700: #1F345C;
+
+  --color-gold-200: #EADBCE;
+  --color-gold-300: #DFCBAB;
+  --color-gold-400: #D3B78C;
+  --color-gold-500: #C5A880;
+  --color-gold-600: #AA8C64;
+  --color-gold-700: #896F4B;
+
+  --color-warm-50: #FAF9F5;
+  --color-warm-100: #F3F1EB;
+  --color-warm-200: #E6E3D8;
+}
+
+/* CSS-only subtle architectural grid & fine guilloche-inspired hairline motifs (ZERO images) */
+.css-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(197, 168, 128, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(197, 168, 128, 0.05) 1px, transparent 1px);
+}
+
+.css-fine-lines {
+  background-size: 100% 24px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(197, 168, 128, 0.035),
+    rgba(197, 168, 128, 0.035) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+}
+
+/* Legal seal CSS motif - strictly geometric borders and lines, NO SVGs or graphics */
+.css-law-border {
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  position: relative;
+}
+
+.css-law-border::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  pointer-events: none;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1528;
+}
+::-webkit-scrollbar-thumb {
+  background: #233454;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
